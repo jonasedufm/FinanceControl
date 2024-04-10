@@ -1,0 +1,7 @@
+C:\Users\jonas\OneDrive\Desktop\Aula\C# - Projetos\FinanceControl\FinanceControl\obj\Debug\FinanceControl.csprojAssemblyReference.cache
+C:\Users\jonas\OneDrive\Desktop\Aula\C# - Projetos\FinanceControl\FinanceControl\obj\Debug\FinanceControl.csproj.CoreCompileInputs.cache
+C:\Users\jonas\OneDrive\Desktop\Aula\C# - Projetos\FinanceControl\FinanceControl\bin\Debug\FinanceControl.exe.config
+C:\Users\jonas\OneDrive\Desktop\Aula\C# - Projetos\FinanceControl\FinanceControl\bin\Debug\FinanceControl.exe
+C:\Users\jonas\OneDrive\Desktop\Aula\C# - Projetos\FinanceControl\FinanceControl\bin\Debug\FinanceControl.pdb
+C:\Users\jonas\OneDrive\Desktop\Aula\C# - Projetos\FinanceControl\FinanceControl\obj\Debug\FinanceControl.exe
+C:\Users\jonas\OneDrive\Desktop\Aula\C# - Projetos\FinanceControl\FinanceControl\obj\Debug\FinanceControl.pdb
