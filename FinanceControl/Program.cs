@@ -17,12 +17,18 @@ namespace FinanceControl
         {
             while (true)
             {
+                Console.Clear(); // Limpa o console antes de exibir o menu
+
                 // Exibe o menu de opções
-                Console.WriteLine("1. Adicionar Despesa");
-                Console.WriteLine("2. Adicionar Receita");
-                Console.WriteLine("3. Ver Relatório Financeiro");
-                Console.WriteLine("4. Sair");
+                Console.WriteLine("Bem-vindo ao FinanceControl");
+                Console.WriteLine("================================");
+                Console.WriteLine("[1] Adicionar Despesa");
+                Console.WriteLine("[2] Adicionar Receita");
+                Console.WriteLine("[3] Ver Relatório Financeiro");
+                Console.WriteLine("[4] Sair");
+                Console.WriteLine("================================");
                 Console.Write("Escolha uma opção: ");
+
                 string choice = Console.ReadLine();
 
                 // Verifica a escolha do usuário e chama o método correspondente
@@ -50,48 +56,45 @@ namespace FinanceControl
         // Método para adicionar uma despesa à lista de despesas
         public void AddExpense()
         {
+            Console.Clear();
             Console.Write("Digite o valor da despesa: ");
             decimal expense = decimal.Parse(Console.ReadLine());
             expenses.Add(expense);
-            Console.WriteLine("Despesa adicionada com sucesso.");
+            Console.WriteLine("Despesa adicionada com sucesso. Pressione qualquer tecla para voltar ao menu.");
+            Console.ReadKey();
         }
 
         // Método para adicionar uma receita à lista de receitas
         public void AddIncome()
         {
+            Console.Clear();
             Console.Write("Digite o valor da receita: ");
             decimal income = decimal.Parse(Console.ReadLine());
             incomes.Add(income);
-            Console.WriteLine("Receita adicionada com sucesso.");
+            Console.WriteLine("Receita adicionada com sucesso. Pressione qualquer tecla para voltar ao menu.");
+            Console.ReadKey();
         }
 
         // Método para exibir o relatório financeiro
         public void ViewFinancialReport()
         {
+            Console.Clear();
             // Variáveis para calcular o total de despesas, receitas e saldo
-            decimal totalExpenses = 0;
-            decimal totalIncomes = 0;
-
-            // Calcula o total de despesas somando todos os valores da lista de despesas
-            foreach (decimal expense in expenses)
-            {
-                totalExpenses += expense;
-            }
-
-            // Calcula o total de receitas somando todos os valores da lista de receitas
-            foreach (decimal income in incomes)
-            {
-                totalIncomes += income;
-            }
+            decimal totalExpenses = expenses.Sum();
+            decimal totalIncomes = incomes.Sum();
 
             // Calcula o saldo subtraindo o total de despesas do total de receitas
             decimal balance = totalIncomes - totalExpenses;
 
             // Exibe o relatório financeiro
             Console.WriteLine("Relatório Financeiro:");
-            Console.WriteLine("Despesas totais: " + totalExpenses);
-            Console.WriteLine("Receitas totais: " + totalIncomes);
-            Console.WriteLine("Saldo: " + balance);
+            Console.WriteLine("========================");
+            Console.WriteLine($"Despesas totais: {totalExpenses:C}");
+            Console.WriteLine($"Receitas totais: {totalIncomes:C}");
+            Console.WriteLine($"Saldo: {balance:C}");
+            Console.WriteLine("========================");
+            Console.WriteLine("Pressione qualquer tecla para voltar ao menu.");
+            Console.ReadKey();
         }
     }
 
